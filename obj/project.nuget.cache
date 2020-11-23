@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "ngdOb87zRKxxcpqmw8GgLOIcF+MI8ecsfp0B5qI1zer9gG49GBCIudv6i43GRAiySF1xnnBPBsBYGKLNLVIwTA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Caleb\\Documents\\Programming-Projects\\InvestingHelper\\InvestingHelper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Caleb\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
