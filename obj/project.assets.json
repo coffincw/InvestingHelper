@@ -10,6 +10,18 @@
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
+      },
+      "ThreeFourteen.Finnhub.Client/1.2.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/ThreeFourteen.Finnhub.Client.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/ThreeFourteen.Finnhub.Client.dll": {}
+        }
       }
     }
   },
@@ -44,11 +56,27 @@
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
+    },
+    "ThreeFourteen.Finnhub.Client/1.2.0": {
+      "sha512": "t6EQnhfqeL5GYJX6VO9yAU7CROjzdIxpBXd40qkmfg4KurQg5cpPR3g9Rb+yClK0/LqgnyJXIUiQpaZyw8Wo4w==",
+      "type": "package",
+      "path": "threefourteen.finnhub.client/1.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE/LICENSE",
+        "icon.jpg",
+        "lib/net461/ThreeFourteen.Finnhub.Client.dll",
+        "lib/netstandard2.0/ThreeFourteen.Finnhub.Client.dll",
+        "threefourteen.finnhub.client.1.2.0.nupkg.sha512",
+        "threefourteen.finnhub.client.nuspec"
+      ]
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Newtonsoft.Json >= 12.0.3"
+      "Newtonsoft.Json >= 12.0.3",
+      "ThreeFourteen.Finnhub.Client >= 1.2.0"
     ]
   },
   "packageFolders": {
@@ -57,11 +85,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Caleb\\Documents\\Programming-Projects\\InvestingHelper\\InvestingHelper.csproj",
+      "projectUniqueName": "c:\\Users\\Caleb\\Documents\\Programming-Projects\\InvestingHelper\\InvestingHelper.csproj",
       "projectName": "InvestingHelper",
-      "projectPath": "C:\\Users\\Caleb\\Documents\\Programming-Projects\\InvestingHelper\\InvestingHelper.csproj",
+      "projectPath": "c:\\Users\\Caleb\\Documents\\Programming-Projects\\InvestingHelper\\InvestingHelper.csproj",
       "packagesPath": "C:\\Users\\Caleb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Caleb\\Documents\\Programming-Projects\\InvestingHelper\\obj\\",
+      "outputPath": "c:\\Users\\Caleb\\Documents\\Programming-Projects\\InvestingHelper\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Caleb\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -91,6 +119,10 @@
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.3, )"
+          },
+          "ThreeFourteen.Finnhub.Client": {
+            "target": "Package",
+            "version": "[1.2.0, )"
           }
         },
         "imports": [
