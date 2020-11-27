@@ -1,7 +1,19 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {
+    "net5.0-windows7.0": {
+      "JObject/1.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "11.0.2"
+        },
+        "compile": {
+          "lib/netcoreapp2.0/JObject.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/JObject.dll": {}
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
@@ -10,22 +22,22 @@
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
-      },
-      "ThreeFourteen.Finnhub.Client/1.2.0": {
-        "type": "package",
-        "dependencies": {
-          "Newtonsoft.Json": "11.0.2"
-        },
-        "compile": {
-          "lib/netstandard2.0/ThreeFourteen.Finnhub.Client.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard2.0/ThreeFourteen.Finnhub.Client.dll": {}
-        }
       }
     }
   },
   "libraries": {
+    "JObject/1.0.0": {
+      "sha512": "Z16S56kCKISB54p22yFsB9HKLCTEEEfZGi1NC62sJ7SWDZptcgmO3n6AhiUnOlho6Y8KfKKuNUayG9pIfQ05Hg==",
+      "type": "package",
+      "path": "jobject/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jobject.1.0.0.nupkg.sha512",
+        "jobject.nuspec",
+        "lib/netcoreapp2.0/JObject.dll"
+      ]
+    },
     "Newtonsoft.Json/12.0.3": {
       "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
@@ -56,27 +68,12 @@
         "newtonsoft.json.nuspec",
         "packageIcon.png"
       ]
-    },
-    "ThreeFourteen.Finnhub.Client/1.2.0": {
-      "sha512": "t6EQnhfqeL5GYJX6VO9yAU7CROjzdIxpBXd40qkmfg4KurQg5cpPR3g9Rb+yClK0/LqgnyJXIUiQpaZyw8Wo4w==",
-      "type": "package",
-      "path": "threefourteen.finnhub.client/1.2.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE/LICENSE",
-        "icon.jpg",
-        "lib/net461/ThreeFourteen.Finnhub.Client.dll",
-        "lib/netstandard2.0/ThreeFourteen.Finnhub.Client.dll",
-        "threefourteen.finnhub.client.1.2.0.nupkg.sha512",
-        "threefourteen.finnhub.client.nuspec"
-      ]
     }
   },
   "projectFileDependencyGroups": {
-    "net5.0": [
-      "Newtonsoft.Json >= 12.0.3",
-      "ThreeFourteen.Finnhub.Client >= 1.2.0"
+    "net5.0-windows7.0": [
+      "JObject >= 1.0.0",
+      "Newtonsoft.Json >= 12.0.3"
     ]
   },
   "packageFolders": {
@@ -85,24 +82,24 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Caleb\\Documents\\Programming-Projects\\InvestingHelper\\InvestingHelper.csproj",
-      "projectName": "InvestingHelper",
-      "projectPath": "c:\\Users\\Caleb\\Documents\\Programming-Projects\\InvestingHelper\\InvestingHelper.csproj",
+      "projectUniqueName": "C:\\Users\\Caleb\\Documents\\Programming-Projects\\InvestingHelper\\App\\App.csproj",
+      "projectName": "App",
+      "projectPath": "C:\\Users\\Caleb\\Documents\\Programming-Projects\\InvestingHelper\\App\\App.csproj",
       "packagesPath": "C:\\Users\\Caleb\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Caleb\\Documents\\Programming-Projects\\InvestingHelper\\obj\\",
+      "outputPath": "C:\\Users\\Caleb\\Documents\\Programming-Projects\\InvestingHelper\\App\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Caleb\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net5.0"
+        "net5.0-windows"
       ],
       "sources": {
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net5.0-windows7.0": {
+          "targetAlias": "net5.0-windows",
           "projectReferences": {}
         }
       },
@@ -113,16 +110,16 @@
       }
     },
     "frameworks": {
-      "net5.0": {
-        "targetAlias": "net5.0",
+      "net5.0-windows7.0": {
+        "targetAlias": "net5.0-windows",
         "dependencies": {
+          "JObject": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
           "Newtonsoft.Json": {
             "target": "Package",
             "version": "[12.0.3, )"
-          },
-          "ThreeFourteen.Finnhub.Client": {
-            "target": "Package",
-            "version": "[1.2.0, )"
           }
         },
         "imports": [
@@ -138,6 +135,9 @@
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
           }
         },
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
